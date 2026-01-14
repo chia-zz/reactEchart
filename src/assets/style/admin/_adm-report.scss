@@ -1,0 +1,93 @@
+// time filter
+.time-filter-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 4px 16px;
+  gap: 8px;
+
+  // liquid glass 效果
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    ),
+    linear-gradient(
+      225deg,
+      rgba(250, 182, 44, 0.05) 0%,
+      rgba(250, 182, 44, 0.2) 100%
+    );
+
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 2px 1px 0px -1px rgba(255, 255, 255, 0.9),
+    inset -1.5px -1px 0px -1px rgba(255, 255, 255, 0.8),
+    inset -2px -6px 1px -5px rgba(255, 255, 255, 0.6),
+    inset -1px 2px 3px -1px rgba(0, 0, 0, 0.2),
+    inset 0px -4px 1px -2px rgba(0, 0, 0, 0.1),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+
+  &:hover {
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 2px 1px 0px -1px rgba(255, 255, 255, 1),
+      inset -1.5px -1px 0px -1px rgba(255, 255, 255, 0.9),
+      inset -2px -6px 1px -5px rgba(255, 255, 255, 0.9),
+      inset -1px 2px 3px -1px rgba(0, 0, 0, 0.3),
+      inset 0px -4px 1px -2px rgba(0, 0, 0, 0.3),
+      0px 3px 6px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.btn-filter {
+  position: relative;
+  padding: 4px 8px;
+  text-decoration: none;
+  border-radius: 40px;
+  z-index: 1;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  &:hover {
+    color: $white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      135deg,
+      rgba(250, 182, 44, 0.5),
+      rgba(250, 182, 44, 0.15)
+    );
+    backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 2px 1px 0px -1px rgba(255, 255, 255, 1),
+      inset -1.5px -1px 0px -1px rgba(255, 255, 255, 0.9),
+      inset -2px -6px 1px -5px rgba(255, 255, 255, 0.9),
+      inset -1px 2px 3px -1px rgba(0, 0, 0, 0.3),
+      inset 0px -4px 1px -2px rgba(0, 0, 0, 0.3),
+      0px 3px 6px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.btn-filter.active {
+  color: $white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(150%);
+  background-color: rgba(250, 182, 44, 0.7);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 2px 1px 0px -1px rgba(255, 255, 255, 0.5),
+    inset -1.5px -1px 0px -1px rgba(255, 255, 255, 0.9),
+    inset -2px -6px 1px -5px rgba(255, 255, 255, 0.9),
+    inset -1px 2px 3px -1px rgba(0, 0, 0, 0.4),
+    inset 0px -4px 1px -2px rgba(0, 0, 0, 0.3),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+
+  pointer-events: none;
+}
